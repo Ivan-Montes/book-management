@@ -1,0 +1,78 @@
+HELP.md
+
+# Maven and Java
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Gradle build
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+# Node/React frontend artifacts in any frontend folder (for multimodule flexibility)
+**/frontend/node_modules/
+**/frontend/build/
+**/frontend/.env.local
+**/frontend/.env.development.local
+**/frontend/.env.test.local
+**/frontend/.env.production.local
+
+# NPM/Yarn logs anywhere
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Java class files
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# JVM crash logs
+hs_err_pid*
+
+# IntelliJ additional
+out/
+.idea_modules/
+atlassian-ide-plugin.xml
+com_crashlytics_export_strings.xml
+
+
+# This entry ignores generated frontend files in any directory.
+**/frontend/generated/**
