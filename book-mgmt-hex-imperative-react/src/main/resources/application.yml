@@ -1,0 +1,69 @@
+
+spring:
+  application:
+    name: book-mgmt-hex-imperative-react
+  threads:
+    virtual:
+      enabled: true
+
+  config:
+    import: optional:file:.env[.properties]   
+
+  datasource:
+    url: jdbc:h2:mem:bookDb
+
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        "[show_sql]": true
+        "[use_sql_comments]": true
+        "[format_sql]": true
+    open-in-view: true
+
+  sql:
+    init:
+      mode: always
+
+  data:
+    mongodb:
+      uri: mongodb://${spring.data.mongodb.user}:${spring.data.mongodb.password}@${spring.data.mongodb.host}:${spring.data.mongodb.port}/${spring.data.mongodb.database}?authSource=admin
+      host: localhost
+      port: 27017
+      user: sa
+      password: ${MONGODB_PASS_WRITE:bad_pass}
+      database: book_write_db
+
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        acks: all
+        retries: 10
+        retry:
+          backoff:
+            ms: 1000
+    consumer:
+      bootstrap-servers: localhost:9092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: '*' 
+
+logging:
+  level:
+    org:
+      hibernate:
+        type: trace
+
