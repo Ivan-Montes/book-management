@@ -1,0 +1,55 @@
+
+spring:
+  application:
+    name: book-mgmt-hex-reactive-react
+
+  config:
+    import: optional:file:.env[.properties]  
+
+  data:
+    mongodb:
+      uri: mongodb://${spring.data.mongodb.user}:${spring.data.mongodb.password}@${spring.data.mongodb.host}:${spring.data.mongodb.port}/${spring.data.mongodb.database}?authSource=admin
+      host: localhost
+      port: 27017
+      user: sa
+      password: ${MONGODB_PASS_WRITE:bad_pass}
+      database: book_write_db
+
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        acks: all
+        retries: 10
+        retry:
+          backoff:
+            ms: 1000
+    consumer:
+      bootstrap-servers: localhost:9092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: '*'
+
+logging:
+  level:
+    org:
+      hibernate:
+        type: trace
+
+properties:
+  hibernate:
+    url: jdbc:${properties.hibernate.drivername}://${properties.hibernate.host}:${properties.hibernate.port}/${properties.hibernate.database}
+    user: root
+    password: ${SQLDB_PASS}
+    database: bookReadDb
+    host: localhost
+    port: 5432
+    driverfqn: org.postgresql.Driver
+    drivername: postgresql
+
