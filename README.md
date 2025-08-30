@@ -19,12 +19,22 @@ Upgrade of [SpringBasicBooksManagement](https://github.com/Ivan-Montes/SpringBas
 
 | Module Name | Architecture | Programming Style | UI Framework |
 |-----|-----|-----|-----|
-|  |  |  |  |
-
+| book-mgmt-basic-imperative-react | 3 Layers | imperative | react  + JS |
+| book-mgmt-hex-imperative-react | hexagonal | imperative | react + TS | 
+| book-mgmt-hex-reactive-react | hexagonal | reactive | react + TS | 
 
 
 #### Description
 
+- book-mgmt-basic-imperative-react
+Monolithic architecture MVC with Spring Framework for managing a book collection.
+
+- book-mgmt-hex-imperative-react
+Maven project with Hexagonal Arch, CQRS, Event Sourcing and Kafka for synchronizing databases. You should also run the project's Docker Compose file.
+
+- book-mgmt-hex-reactive-react
+Maven project is built with Reactive Programming, Hexagonal Arch, CQRS, Event Sourcing and Kafka for synchronizing databases. It's necessary to run the docker-compose file 
+included inside the project folder
      
 
 ## Requirements
