@@ -67,6 +67,7 @@
     <module>book-mgmt-basic-imperative-react</module>
     <module>book-mgmt-hex-imperative-react</module>
     <module>book-mgmt-hex-reactive-react</module>
+    <module>book-mgmt-hex-reactivefunctional-react</module>
   </modules>
   
 </project>
