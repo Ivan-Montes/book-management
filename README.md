@@ -22,6 +22,7 @@ Upgrade of [SpringBasicBooksManagement](https://github.com/Ivan-Montes/SpringBas
 | book-mgmt-basic-imperative-react | 3 Layers | imperative | react  + JS |
 | book-mgmt-hex-imperative-react | hexagonal | imperative | react + TS | 
 | book-mgmt-hex-reactive-react | hexagonal | reactive | react + TS | 
+| book-mgmt-hex-reactivefunctional-react | hexagonal | reactive | react + TS | 
 
 
 #### Description
@@ -35,6 +36,9 @@ Maven project with Hexagonal Arch, CQRS, Event Sourcing and Kafka for synchroniz
 - book-mgmt-hex-reactive-react
 Maven project is built with Reactive Programming, Hexagonal Arch, CQRS, Event Sourcing and Kafka for synchronizing databases. It's necessary to run the docker-compose file 
 included inside the project folder
+
+- book-mgmt-hex-reactivefunctional-react
+Project using functional endpoints and error handling implemented within the reactive flow. Spring Security and OpenAPI Swagger UI are implemented. Projector classes responsible for synchronizing the CQRS read database perform double validation prior to modifying the database state
      
 
 ## Requirements
