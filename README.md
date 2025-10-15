@@ -1,7 +1,6 @@
 
 # book-management
 
- :rotating_light::no_entry: **IN CONSTRUCCTION**
 Upgrade of [SpringBasicBooksManagement](https://github.com/Ivan-Montes/SpringBasicBooksManagement) project with different approaches
 
 ## Table of contents
@@ -27,17 +26,17 @@ Upgrade of [SpringBasicBooksManagement](https://github.com/Ivan-Montes/SpringBas
 
 #### Description
 
-- book-mgmt-basic-imperative-react
+- **book-mgmt-basic-imperative-react**
 Monolithic architecture MVC with Spring Framework for managing a book collection.
 
-- book-mgmt-hex-imperative-react
+- **book-mgmt-hex-imperative-react**
 Maven project with Hexagonal Arch, CQRS, Event Sourcing and Kafka for synchronizing databases. You should also run the project's Docker Compose file.
 
-- book-mgmt-hex-reactive-react
+- **book-mgmt-hex-reactive-react**
 Maven project is built with Reactive Programming, Hexagonal Arch, CQRS, Event Sourcing and Kafka for synchronizing databases. It's necessary to run the docker-compose file 
 included inside the project folder
 
-- book-mgmt-hex-reactivefunctional-react
+- **book-mgmt-hex-reactivefunctional-react**
 Project using functional endpoints and error handling implemented within the reactive flow. Spring Security and OpenAPI Swagger UI are implemented. Projector classes responsible for synchronizing the CQRS read database perform double validation prior to modifying the database state
      
 
